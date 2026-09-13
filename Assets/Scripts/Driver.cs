@@ -14,7 +14,6 @@ public class Driver : MonoBehaviour
         if (Keyboard.current.wKey.isPressed) 
         {
             move = 1f;
-            Debug.Log("pressed w");
         }
 
         else if (Keyboard.current.aKey.isPressed)
