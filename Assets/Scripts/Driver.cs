@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,13 +6,13 @@ public class Driver : MonoBehaviour
 {
     [SerializeField] float steerSpeed = 200f;
     [SerializeField] float moveSpeed = 10f;
-    
+
     void Update()
     {
         float move = 0f;
         float steer = 0f;
 
-        if (Keyboard.current.wKey.isPressed) 
+        if (Keyboard.current.wKey.isPressed)
         {
             move = 1f;
         }
@@ -37,4 +38,5 @@ public class Driver : MonoBehaviour
         transform.Rotate(0, 0, steerAmount);
         transform.Translate(0, moveAmount, 0);
     }
+
 }
