@@ -12,22 +12,22 @@ public class Driver : MonoBehaviour
         float move = 0f;
         float steer = 0f;
 
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.upArrowKey.isPressed)
         {
             move = 1f;
         }
 
-        else if (Keyboard.current.aKey.isPressed)
+        else if (Keyboard.current.leftArrowKey.isPressed)
         {
             steer = 1f;
         }
 
-        if (Keyboard.current.dKey.isPressed)
+        if (Keyboard.current.rightArrowKey.isPressed)
         {
             steer = -1f;
         }
 
-        else if (Keyboard.current.sKey.isPressed)
+        else if (Keyboard.current.downArrowKey.isPressed)
         {
             move = -1f;
         }
