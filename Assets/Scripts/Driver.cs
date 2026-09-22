@@ -15,6 +15,8 @@ public class Driver : MonoBehaviour
     void Start()
     {
         boostText.gameObject.SetActive(false);
+        GetComponent<TrailRenderer>().enabled = false;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +25,7 @@ public class Driver : MonoBehaviour
         {
             currentSpeed = boostSpeed;
             boostText.gameObject.SetActive(true);
+            GetComponent<TrailRenderer>().enabled = true;
             Destroy(collision.gameObject);
         }
     }
@@ -33,6 +36,7 @@ public class Driver : MonoBehaviour
         {
             currentSpeed = regularSpeed;
             boostText.gameObject.SetActive(false);
+            GetComponent<TrailRenderer>().enabled = false;
         }
     }
 
